@@ -1,0 +1,26 @@
+name: auto_size_text_community
+description: >-
+  Flutter widget that automatically resizes text to fit its bounds. A maintained,
+  drop-in successor of auto_size_text with TextScaler support.
+version: 3.1.0
+repository: https://github.com/bada-labs/auto_size_text_community
+issue_tracker: https://github.com/bada-labs/auto_size_text_community/issues
+topics:
+  - text
+  - font
+  - responsive
+  - widget
+
+environment:
+  sdk: ^3.2.0
+  flutter: ">=3.16.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+dev_dependencies:
+  auto_size_text: 3.0.0
+  flutter_lints: ">=3.0.0 <7.0.0"
+  flutter_test:
+    sdk: flutter
