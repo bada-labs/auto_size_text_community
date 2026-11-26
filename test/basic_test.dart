@@ -1,5 +1,5 @@
 import 'package:auto_size_text_community/auto_size_text.dart';
-import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 import 'utils.dart';
@@ -44,7 +44,7 @@ void main() {
   testWidgets('Respects inherit style', (tester) async {
     final defaultStyle = TextStyle(
       fontSize: 20,
-      color: Colors.yellow,
+      color: Color(0xFFFFEB3B),
     );
     final text = await pumpAndGetText(
       tester: tester,

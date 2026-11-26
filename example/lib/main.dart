@@ -1,50 +1,44 @@
 import 'package:auto_size_text_community/auto_size_text_community.dart';
-import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 
 void main() => runApp(const ExampleApp());
 
-class ExampleApp extends StatefulWidget {
+/// Shows the same sentence in boxes of different widths, and two labels that
+/// share one size through an [AutoSizeGroup].
+class ExampleApp extends StatelessWidget {
   const ExampleApp({super.key});
 
-  @override
-  State<ExampleApp> createState() => _ExampleAppState();
-}
-
-class _ExampleAppState extends State<ExampleApp> {
-  final _group = AutoSizeGroup();
-  double _width = 300;
+  static final _labelGroup = AutoSizeGroup();
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: Scaffold(
-        appBar: AppBar(title: const Text('auto_size_text_community')),
-        body: Padding(
-          padding: const EdgeInsets.all(16),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
+    return WidgetsApp(
+      color: const Color(0xFF007AFF),
+      builder: (context, _) => DefaultTextStyle(
+        style: const TextStyle(color: Color(0xFF000000)),
+        child: ColoredBox(
+          color: const Color(0xFFFFFFFF),
+          child: ListView(
+            padding: const EdgeInsets.all(24),
             children: [
-              Slider(
-                value: _width,
-                min: 60,
-                max: 360,
-                onChanged: (width) => setState(() => _width = width),
-              ),
-              SizedBox(
-                width: _width,
-                child: const AutoSizeText(
-                  'This text shrinks to fit on two lines.',
-                  style: TextStyle(fontSize: 30),
-                  maxLines: 2,
+              for (final width in [320.0, 200.0, 120.0])
+                Padding(
+                  padding: const EdgeInsets.only(bottom: 16),
+                  child: SizedBox(
+                    width: width,
+                    child: const AutoSizeText(
+                      'This text shrinks to fit on two lines.',
+                      style: TextStyle(fontSize: 30),
+                      maxLines: 2,
+                    ),
+                  ),
                 ),
-              ),
-              const SizedBox(height: 24),
               for (final label in ['Short', 'A much longer label'])
                 SizedBox(
-                  width: _width,
+                  width: 160,
                   child: AutoSizeText(
                     label,
-                    group: _group,
+                    group: _labelGroup,
                     style: const TextStyle(fontSize: 30),
                     maxLines: 1,
                   ),

@@ -1,5 +1,5 @@
 import 'package:auto_size_text_community/auto_size_text.dart';
-import 'package:flutter/cupertino.dart';
+import 'package:flutter/widgets.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 import 'utils.dart';

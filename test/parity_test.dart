@@ -1,7 +1,7 @@
 // ignore_for_file: deprecated_member_use
 import 'package:auto_size_text/auto_size_text.dart' as original;
 import 'package:auto_size_text_community/auto_size_text.dart' as community;
-import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 /// Renders the same configuration with `auto_size_text` 3.0.0 and this package

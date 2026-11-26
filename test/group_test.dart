@@ -1,5 +1,5 @@
 import 'package:auto_size_text_community/auto_size_text.dart';
-import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 import 'utils.dart';
@@ -18,8 +18,9 @@ class GroupTestState extends State<GroupTest> {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: Column(
+    return Directionality(
+      textDirection: TextDirection.ltr,
+      child: Column(
         children: <Widget>[
           SizedBox(
             width: width1,
