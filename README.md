@@ -1,5 +1,7 @@
 # auto_size_text_community
 
+> **Discontinued.** Use [`auto_size_text_ce`](https://pub.dev/packages/auto_size_text_ce), the maintained community edition of `auto_size_text`. It also supports `TextScaler`, and in our comparison it renders the same sizes as `auto_size_text` 3.0.0 for word-wrapping text. This package will not receive updates.
+
 [![pub package](https://img.shields.io/pub/v/auto_size_text_community.svg)](https://pub.dev/packages/auto_size_text_community)
 [![CI](https://github.com/bada-labs/auto_size_text_community/actions/workflows/ci.yaml/badge.svg)](https://github.com/bada-labs/auto_size_text_community/actions/workflows/ci.yaml)
 
