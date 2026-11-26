@@ -190,12 +190,12 @@ class AutoSizeText extends StatefulWidget {
 
   /// The font scaling strategy to use when laying out and rendering the text.
   ///
-  /// Unlike [textScaleFactor], this supports nonlinear scaling such as the
+  /// Unlike `textScaleFactor`, this supports nonlinear scaling such as the
   /// Android 14 font size settings, so small and large font sizes grow by
   /// different amounts like they do in a [Text].
   ///
   /// This property also affects [minFontSize], [maxFontSize] and
-  /// [presetFontSizes]. If null, uses [textScaleFactor] when set, otherwise
+  /// [presetFontSizes]. If null, uses `textScaleFactor` when set, otherwise
   /// the [TextScaler] of the ambient [MediaQuery], or [TextScaler.noScaling]
   /// if there is no [MediaQuery] in scope.
   final TextScaler? textScaler;
